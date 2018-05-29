@@ -34,7 +34,7 @@ listFilterby : string = 'Cart';
 //array<any> product = [] /// we acan also write such a way
 
     products : IProduct[] = [{
-        productName: "RedRose",       
+        productName: "RedRose New",       
         code : "101",
         available: "yes",  
         price: 3000,       
