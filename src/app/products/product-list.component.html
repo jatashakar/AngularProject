@@ -1,0 +1,66 @@
+<div class= 'panel panel-primary'>
+    <div class="panel-heading">
+         {{pageTitle}}    
+    <!-- <div>{{name}}</div>  -->
+    <!-- {{ngReturnMethod()}} -->
+    </div>
+
+    
+    <div class= "panel-body">
+        <div class='row'>
+            <!-- <div class="col-md-2">Filter by JS:</div> -->
+            <h1>Filter by: </h1>
+            <div class="col-md-4"> 
+                <input type="text" [(ngModel)] = 'listFilterby'  />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Filtered by: {{listFilterby}} </h3>
+            </div>
+            
+        </div>
+
+        <div class="table table-responsive">
+            <table class="table" >
+                <thead>
+                    <tr>
+                        <th>
+                            <button class="btn btn-primary" (click) = 'toggleImage()'>
+                          {{showImage ? 'Hide' : 'Show'}} Image
+                                <!-- {{showImage ? 'Hide' : 'Show'}} Image -->
+                            </button>                      
+
+                        </th>
+                        <th><b>Product</b></th>
+                        <th><b>Code</b></th>
+                        <th><b>Available</b></th>
+                        <th><b>Price</b></th>
+                        <th><b>5 Star Rating</b></th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr *ngFor = 'let tObj of products'>
+                            <!-- // below image code is a property binding -->
+                        <td><img *ngIf = 'showImage' [src] = 'tObj.imageUrl' [width]='imgWidth' [style.margin.px]='imageMargin'></td> 
+                        <td>{{tObj.productName}}</td>
+                        <td>{{tObj.code}}</td>
+                        <!-- //Pipes binding -->
+                        <td>{{tObj.available | uppercase}}</td>
+                        <td>{{tObj.price | currency:'USD':true:'1.2-2'}}</td>  
+                        <td>
+                            <app-startcomponent  [rating]='tObj.productrating'>
+                                              
+                            </app-startcomponent>
+                        </td>
+                        
+                        
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
