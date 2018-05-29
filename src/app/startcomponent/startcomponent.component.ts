@@ -13,7 +13,9 @@ starWidth : number;
   console.log("StartWidth="+this.starWidth);
   }
   constructor() { }
-
+get(): number{
+  return 0;
+}
 
 
 }
