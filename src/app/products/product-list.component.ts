@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component,style, OnInit } from "@angular/core";
 import { getQueryValue } from "@angular/core/src/view/query";
 import { IProduct } from "./product";
 
