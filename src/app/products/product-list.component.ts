@@ -1,12 +1,12 @@
-import { Component,InjectionToken, OnInit } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { getQueryValue } from "@angular/core/src/view/query";
 import { IProduct } from "./product";
 
 @Component({
 //    below are the meta data propery
     selector: 'product-list', // we can call selector from appcomponent with `<product-list></product-list>`
-    //templateUrl: './product-list.component.html',
-   // styleUrls: ['./product-list.component.css']
+    templateUrl: './product-list.component.html',
+    styleUrls: ['./product-list.component.css']
     //template:
     //style:
     //styleUrls:
