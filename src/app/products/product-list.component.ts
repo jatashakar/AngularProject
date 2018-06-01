@@ -24,6 +24,7 @@ imgheight: number = 100
 imageMargin: 4
 showImage: boolean = false;
 _listFilterby : string ;
+filterProducts: IProduct[];
 
 get listFilter() : string{
     return this._listFilterby;
@@ -31,6 +32,7 @@ get listFilter() : string{
 
 set listFilter(value:string) {
     this._listFilterby=value;
+    this.filterProducts = this.listFilter ? this.performFilter(this.listFilter) : this.products;
 }
 // we can do both binding interpolation and property bind akways work with html property
 ///////////////below is the return method and call from productlist.html 
@@ -66,6 +68,18 @@ set listFilter(value:string) {
                 imageUrl: 'https://img.youtube.com/vi/SCdgIxWfvaQ/2.jpg'
                  }
 ]
+
+constructor (){
+    this.filterProducts = this.products;
+    this._listFilterby = 'cart';
+}
+
+performFilter(filterBy : string) : IProduct[]{
+    filterBy = filterBy.toLocaleLowerCase();
+    return this.products.filter((products:IProduct) => 
+    products.productName.toLocaleLowerCase().indexOf(filterBy) !== -1);
+}
+
 toggleImage(): void{
     this.showImage = !this.showImage;
 }
