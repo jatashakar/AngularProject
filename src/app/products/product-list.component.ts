@@ -43,7 +43,7 @@ set listFilter(value:string) {
 
 products : IProduct[] = []
 
-constructor (private _productService : ProductserviceService , private _pservice : PserviceService){
+constructor (private _productService : ProductserviceService ){
    
     console.log("products ---- "+this.products);
 }
