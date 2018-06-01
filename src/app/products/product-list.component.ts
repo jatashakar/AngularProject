@@ -44,7 +44,7 @@ set listFilter(value:string) {
 //array<any> product = [] /// we acan also write such a way
 
     products : IProduct[] = [{
-        productName: "RedRose 31may18 chnaged",       
+        productName: "cart RedRose 31may18 chnaged",       
         code : "101",
         available: "yes",  
         price: 3000,       
