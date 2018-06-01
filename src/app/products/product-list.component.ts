@@ -31,7 +31,7 @@ get listFilter() : string{
 }
 
 set listFilter(value:string) {
-    this._listFilterby=value;
+    this._listFilterby = value;
     this.filterProducts = this.listFilter ? this.performFilter(this.listFilter) : this.products;
 }
 // we can do both binding interpolation and property bind akways work with html property
