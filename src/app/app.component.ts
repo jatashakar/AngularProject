@@ -6,7 +6,7 @@ import { ProductserviceService } from './service/productservice.service';
   template:`<product-list></product-list>`,
   //templateUrl: './app.component.html',
   //styleUrls: ['./app.component.css']
-  providers : [ProductserviceService]
+  providers : [ProductserviceService],
 })
 export class AppComponent {
   title = 'app...................';
