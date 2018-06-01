@@ -49,7 +49,7 @@ constructor (private _productService : ProductserviceService){
 ngOnInit(): void {
     this.products = this._productService.getProduct();
     this.filterProducts = this.products;
-    console.log('Hello OnInit Interface');
+    console.log('Hello OnInit Interface'+this.products);
  
 }
 
