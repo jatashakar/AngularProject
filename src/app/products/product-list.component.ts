@@ -2,7 +2,6 @@ import { Component, OnInit } from "@angular/core";
 import { getQueryValue } from "@angular/core/src/view/query";
 import { IProduct } from "./product";
 import { ProductserviceService } from "../service/productservice.service";
-import { PserviceService } from "../pservice.service";
 
 @Component({
 //    below are the meta data propery
@@ -43,7 +42,7 @@ set listFilter(value:string) {
 
 products : IProduct[] = []
 
-constructor (private _productService : ProductserviceService ){
+constructor (private _productService : ProductserviceService){
    
     console.log("products ---- "+this.products);
 }
