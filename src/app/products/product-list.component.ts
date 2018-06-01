@@ -74,10 +74,10 @@ constructor (){
     this._listFilterby = 'cart';
 }
 
-performFilter(filterBy : string) : IProduct[]{
-    filterBy = filterBy.toLocaleLowerCase();
+performFilter(_listFilterby : string) : IProduct[]{
+    _listFilterby = _listFilterby.toLocaleLowerCase();
     return this.products.filter((products:IProduct) => 
-    products.productName.toLocaleLowerCase().indexOf(filterBy) !== -1);
+    products.productName.toLocaleLowerCase().indexOf(_listFilterby) !== -1);
 }
 
 toggleImage(): void{
