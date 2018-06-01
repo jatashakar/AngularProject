@@ -1,4 +1,4 @@
-import { Component, OnInit, OnChanges, Input } from '@angular/core';
+import { Component, OnInit, OnChanges, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-startcomponent',
@@ -7,6 +7,8 @@ import { Component, OnInit, OnChanges, Input } from '@angular/core';
 })
 export class StartcomponentComponent implements OnChanges {
 @Input() rating: number;
+@Output() ratingClicked : EventEmitter<string> = new EventEmitter<string>();
+
 starWidth : number;
   ngOnChanges(): void {
   this.starWidth = this.rating*86/5;
@@ -16,6 +18,8 @@ starWidth : number;
 get(): number{
   return 0;
 }
-
+onClick() : void {
+this.ratingClicked.emit('The rating ${this.rating} was clicked')
+}
 
 }
