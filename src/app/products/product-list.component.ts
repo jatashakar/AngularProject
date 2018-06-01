@@ -23,7 +23,15 @@ imgWidth : number = 100
 imgheight: number = 100
 imageMargin: 4
 showImage: boolean = false;
-listFilterby : string = 'Cart';
+_listFilterby : string ;
+
+get listFilter() : string{
+    return this._listFilterby;
+}
+
+set listFilter(value:string) {
+    this._listFilterby=value;
+}
 // we can do both binding interpolation and property bind akways work with html property
 ///////////////below is the return method and call from productlist.html 
 // ngReturnMethod() : string{
