@@ -52,7 +52,7 @@
                         <td>{{tObj.available | uppercase}}</td>
                         <td>{{tObj.price | currency:'USD':true:'1.2-2'}}</td>  
                         <td>
-                            <app-startcomponent  [rating]='tObj.productrating'>
+                            <app-startcomponent  [rating]='tObj.productrating' (ratingClicked)='onRatingClicked($event)'>
                                               
                             </app-startcomponent>
                         </td>
