@@ -17,6 +17,7 @@ starWidth : number;
   constructor() { }
 get(): number{
   return 0;
+  
 }
 onClick() : void {
 console.log(`The rating ${this.rating} was clicked`);
