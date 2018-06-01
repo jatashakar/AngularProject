@@ -7,7 +7,7 @@ import { PserviceService } from './pservice.service';
   template:`<product-list></product-list>`,
   //templateUrl: './app.component.html',
   //styleUrls: ['./app.component.css']
-  providers : [ProductserviceService, PserviceService]
+  providers : [PserviceService]
 })
 export class AppComponent {
   title = 'app...................';
