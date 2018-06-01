@@ -44,6 +44,7 @@ set listFilter(value:string) {
 
 constructor (private _productService : ProductserviceService){
     this.products = this._productService.getProduct();
+    console.log("products ---- "+this.products);
 }
 
 ngOnInit(): void {   
