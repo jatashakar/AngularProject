@@ -43,11 +43,10 @@ set listFilter(value:string) {
     products : IProduct[] = []
 
 constructor (private _productService : ProductserviceService){
-  
+    this.products = this._productService.getProduct();
 }
 
-ngOnInit(): void {
-    this.products = this._productService.getProduct();
+ngOnInit(): void {   
     this.filterProducts = this.products;
     console.log('Hello OnInit Interface'+this.products);
  
