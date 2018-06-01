@@ -43,7 +43,7 @@
                 </thead>
                 <tbody>
 
-                    <tr *ngFor = 'let tObj of products'>
+                    <tr *ngFor = 'let tObj of filterProducts'>
                             <!-- // below image code is a property binding -->
                         <td><img *ngIf = 'showImage' [src] = 'tObj.imageUrl' [width]='imgWidth' [style.margin.px]='imageMargin'></td> 
                         <td>{{tObj.productName}}</td>
