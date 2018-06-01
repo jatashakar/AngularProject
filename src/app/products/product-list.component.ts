@@ -40,7 +40,7 @@ set listFilter(value:string) {
 //name: string = 'Ranjeet' //interpolation we can also can any function from html and define here like pageTitle
 //array<any> product = [] /// we acan also write such a way
 
-    products : IProduct[] = []
+products : IProduct[] = []
 
 constructor (private _productService : ProductserviceService){
     this.products = this._productService.getProduct();
