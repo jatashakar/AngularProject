@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { getQueryValue } from "@angular/core/src/view/query";
 import { IProduct } from "./product";
+import { ProductserviceService } from "../service/productservice.service";
 
 @Component({
 //    below are the meta data propery
@@ -12,11 +13,7 @@ import { IProduct } from "./product";
     //styleUrls:
 })
 export class ProductListComponent implements OnInit{
-    ngOnInit(): void {
-        let myAdd = function(x: number, y: number): number { return  x + y; };
-        console.log('Hello OnInit Interface');
-        throw new Error("Method not implemented.");
-    }
+    
 pageTitle : string = 'Product List'; //interpolation
 name: string = 'Jats'
 imgWidth : number = 100
@@ -43,35 +40,17 @@ set listFilter(value:string) {
 //name: string = 'Ranjeet' //interpolation we can also can any function from html and define here like pageTitle
 //array<any> product = [] /// we acan also write such a way
 
-    products : IProduct[] = [{
-        productName: "cart RedRose 31may18 chnaged",       
-        code : "101",
-        available: "yes",  
-        price: 3000,       
-        productrating : "4.5",
-        imageUrl: 'https://img.youtube.com/vi/SCdgIxWfvaQ/2.jpg'
-         },
-         {
-            productName: "White Rose",       
-            code : "102",
-            available: "Yes",  
-            price: 3001,       
-            productrating : "4",
-            imageUrl: 'https://img.youtube.com/vi/SCdgIxWfvaQ/2.jpg'
-             },
-             {
-                productName: "Pink Rose",       
-                code : "103",
-                available: "Yes",  
-                price: 3002,       
-                productrating : "3.5",
-                imageUrl: 'https://img.youtube.com/vi/SCdgIxWfvaQ/2.jpg'
-                 }
-]
+    products : IProduct[] = []
 
-constructor (){
+constructor (private _productService : ProductserviceService){
+  
+}
+
+ngOnInit(): void {
+    this.products = this._productService.getProduct();
     this.filterProducts = this.products;
-    this.listFilter = 'cart';
+    console.log('Hello OnInit Interface');
+ 
 }
 
 performFilter(filterBy : string) : IProduct[]{
