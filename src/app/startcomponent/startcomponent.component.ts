@@ -19,7 +19,7 @@ get(): number{
   return 0;
 }
 onClick() : void {
-this.ratingClicked.emit('The rating ${this.rating} was clicked')
+console.log('The rating ${this.rating} was clicked')
 }
 
 }
