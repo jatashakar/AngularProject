@@ -5,7 +5,6 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { ProductListComponent } from './products/product-list.component';
 import { StartcomponentComponent } from './startcomponent/startcomponent.component';
-import { ProductserviceService } from './service/productservice.service';
 
 
 
@@ -17,7 +16,7 @@ import { ProductserviceService } from './service/productservice.service';
     BrowserModule,
     FormsModule,
   ],
-  providers: [ProductserviceService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
