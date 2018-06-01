@@ -71,7 +71,7 @@ set listFilter(value:string) {
 
 constructor (){
     this.filterProducts = this.products;
-    this._listFilterby = 'cart';
+    this.listFilter = 'cart';
 }
 
 performFilter(filterBy : string) : IProduct[]{
