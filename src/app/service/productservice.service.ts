@@ -19,8 +19,9 @@ export class ProductserviceService {
   }
 
 getProduct() : Observable<IProduct[]>{
-   return .do(data => console.log('All Data:'+JSON.stringify(data)))
-    .catch(this.handleError);
+   return this._httpclint.get<IProduct[]>(this._productUrl)
+          .do(data => console.log('All Data:'+JSON.stringify(data)))
+          .catch(this.handleError);
   
 }
   // getProduct():  IProduct[]{
