@@ -11,7 +11,7 @@ import 'rxjs/add/operator/catch';
 export class ProductserviceService {
 
   handleError(error: any): any {
-    throw new Error("Error through="+error);
+    throw new Error("Error throughn="+error);
   }
   constructor(private _httpclint : HttpClient) {
     console.log ("service strat");
