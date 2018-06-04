@@ -10,7 +10,7 @@ import 'rxjs/add/operator/catch';
 @Injectable()
 export class ProductserviceService {
 
-  private _productUrl;
+  private _productUrl = 'Https://testapi.com';
   handleError(error: any): any {
     throw new Error("Error throughn="+error);
   }
