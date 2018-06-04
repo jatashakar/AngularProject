@@ -10,14 +10,17 @@ import 'rxjs/add/operator/catch';
 @Injectable()
 export class ProductserviceService {
 
+  handleError(arg0: any): any {
+    throw new Error("Method not implemented.");
+  }
   constructor(private _httpclint : HttpClient) {
     console.log ("service strat");
   }
 
 getProduct() : Observable<IProduct[]>{
-    .do(data=> console.log('All Data:'+JSON.stringify(data))
-    .ca
-  return;
+   return .do(data => console.log('All Data:'+JSON.stringify(data)))
+    .catch(this.handleError);
+  
 }
   // getProduct():  IProduct[]{
 
