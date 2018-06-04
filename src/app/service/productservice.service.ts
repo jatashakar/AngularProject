@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { IProduct } from '../products/product';
 import { Observable } from 'rxjs';
 import { HttpClient } from 'selenium-webdriver/http';
+import 'rxjs/add/operator/do';
+import 'rxjs/add/operator/catch';
 
 
 
@@ -13,7 +15,9 @@ export class ProductserviceService {
   }
 
 getProduct() : Observable<IProduct[]>{
-
+    .do(data=> console.log('All Data:'+JSON.stringify(data))
+    .ca
+  return;
 }
   // getProduct():  IProduct[]{
 
