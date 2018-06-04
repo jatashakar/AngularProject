@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { IProduct } from '../products/product';
 import { Observable } from 'rxjs';
-import { HttpClient } from 'selenium-webdriver/http';
+import { HttpClient } from '@angular/common/http';
 import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/catch';
 
