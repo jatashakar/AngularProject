@@ -9,8 +9,9 @@ import { ProductserviceService } from './service/productservice.service';
 <div class = 'conrainer-fluid'>
 <a class='navbar-brand'>{{pageTitle}}</a>
 <ul class = 'nav navbar-nav'>
-<li><a [routerLink]="['/products']">Home</a></li>
 <li><a [routerLink]="['/products']">Product List</a></li>
+<li><a [routerLink]="['/welcome']">Home</a></li>
+
 </ul>
 </div>
 </nav>
