@@ -15,14 +15,16 @@ export class ProductserviceService {
   }
   constructor(private _httpclint: HttpClient) {
     console.log("service strat");
+
   }
 
+  
   getProduct(): Observable<IProduct[]> {
     return this._httpclint.get<IProduct[]>(this._productUrl)
-    pipe(
-      tap(data => console.log('All Data:' + JSON.stringify(data))),
-      catchError(this.handleError)
-    )
+    // pipe(
+    //   tap(data => console.log('All Data:' + JSON.stringify(data))),
+    //   catchError(this.handleError)
+    // )
   }
 
   // getProduct():  IProduct[]{
