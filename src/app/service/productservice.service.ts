@@ -1,9 +1,8 @@
 import { Injectable } from '@angular/core';
 import { IProduct } from '../products/product';
-import { Observable } from 'rxjs';
+import { Observable, pipe } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
-import 'rxjs/add/operator/do';
-import 'rxjs/add/operator/catch';
+import {tap,catchError} from 'rxjs/operators';
 
 
 
@@ -20,8 +19,12 @@ export class ProductserviceService {
 
 getProduct() : Observable<IProduct[]>{
    return this._httpclint.get<IProduct[]>(this._productUrl)
-          .do(data => console.log('All Data:'+JSON.stringify(data)))
-          .catch(this.handleError);}
+   pipe(
+          .tap(data => console.log('All Data:'+JSON.stringify(data))),
+          .catchError(this.handleError)
+   )
+        }
+   
   // getProduct():  IProduct[]{
 
   //   console.log ("service strat 2222");
