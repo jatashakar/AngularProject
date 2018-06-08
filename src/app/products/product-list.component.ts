@@ -51,7 +51,7 @@ constructor (private _productService : ProductserviceService){
 
 ngOnInit(): void {   
     console.log("products ---- "+this.products);
-    this._productService.getProduct();
+    this._productService.getProduct()
     .subscribe(products => {
         this.products = this.products
         this.filterProducts = this.products
