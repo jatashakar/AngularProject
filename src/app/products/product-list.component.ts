@@ -55,7 +55,7 @@ ngOnInit(): void {
     .subscribe(products => {
         this.products = this.products
         this.filterProducts = this.products
-        console.log("products filterProducts---- "+this.filterProducts);
+        console.log("products filterProducts---- "+this.filterProducts.length);
     },
     error => this.errorMsg  = <any>error 
 );
