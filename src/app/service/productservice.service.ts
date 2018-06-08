@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { IProduct } from '../products/product';
 import { Observable, pipe } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
-import {tap,catchError} from 'rxjs/operators';
+import { tap, catchError } from 'rxjs/operators';
 
 
 
@@ -11,20 +11,20 @@ export class ProductserviceService {
 
   private _productUrl = 'Https://testapi.com';
   handleError(error: any): any {
-    throw new Error("Error throughn="+error);
+    throw new Error("Error throughn=" + error);
   }
-  constructor(private _httpclint : HttpClient) {
-    console.log ("service strat");
+  constructor(private _httpclint: HttpClient) {
+    console.log("service strat");
   }
 
-getProduct() : Observable<IProduct[]>{
-   return this._httpclint.get<IProduct[]>(this._productUrl)
-   pipe(
-          .tap(data => console.log('All Data:'+JSON.stringify(data))),
-          .catchError(this.handleError)
-   )
-        }
-   
+  getProduct(): Observable<IProduct[]> {
+    return this._httpclint.get<IProduct[]>(this._productUrl)
+    pipe(
+      tap(data => console.log('All Data:' + JSON.stringify(data))),
+      catchError(this.handleError)
+    )
+  }
+
   // getProduct():  IProduct[]{
 
   //   console.log ("service strat 2222");
