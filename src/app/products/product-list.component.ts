@@ -59,7 +59,7 @@ ngOnInit(): void {
     error => this.errorMsg  = <any>error 
 );
     
-    //console.log('Hello OnInit Interface'+this.products);
+    console.log('Hello OnInit Interface'+this.filterProducts);
    // this._listFilterby='cart';
 }
 
