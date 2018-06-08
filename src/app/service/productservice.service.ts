@@ -23,10 +23,10 @@ export class ProductserviceService {
     console.log('return data ='+this._httpclint.get<IProduct[]>(this._productUrl));
     return this._httpclint.get<IProduct[]>(this._productUrl);
     
-    // pipe(
-    //   tap(data => console.log('All Data:' + JSON.stringify(data))),
-    //   catchError(this.handleError)
-    // )
+    pipe(
+      tap(data => console.log('All Data:' + JSON.stringify(data))),
+      catchError(this.handleError)
+    )
   }
 
   // getProduct():  IProduct[]{
