@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { IProduct } from './product';
 
 @Component({
   selector: 'app-product-details.component',
@@ -6,9 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./product-details.component.component.css']
 })
 export class ProductDetails implements OnInit {
-
+  pageTitle : string = 'Poduct Details';
+ product : IProduct;
   constructor() { }
-
   ngOnInit() {
   }
 
