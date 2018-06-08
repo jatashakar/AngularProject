@@ -54,6 +54,7 @@ ngOnInit(): void {
     this._productService.getProduct()
     .subscribe(products => {
         this.products = products
+        
         this.filterProducts = this.products
         console.log("products filterProducts---- "+this.filterProducts.length);
     },
