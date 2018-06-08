@@ -26,7 +26,7 @@ export class ProductserviceService {
     console.log('return data ='+this._httpclint.get<IProduct[]>(this._productUrl));
     return this._httpclint.get<IProduct[]>(this._productUrl)
     .do(data => console.log('All'+JSON.stringify(data)))
-    .catch(console.log('Test'));
+    //.catch(console.log('Test'));
     
     // pipe(
     //   tap(data => console.log('All Data:' + JSON.stringify(data))),
