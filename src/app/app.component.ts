@@ -3,22 +3,7 @@ import { ProductserviceService } from './service/productservice.service';
 
 @Component({
   selector: 'app-root',
-  template:`
-  <div>
-<nav class ='navbar navbar-default'>
-<div class = 'conrainer-fluid'>
-<a class='navbar-brand'>{{pageTitle}}</a>
-<ul class = 'nav navbar-nav'>
-<li><a [routerLink]="['/welcome']">Home</a></li>
-<li><a [routerLink]="['/products']">Product List</a></li>
-</ul>
-</div>
-</nav>
-<div class= 'container'>
-<router-outlet></routrer-outlet>
-</div>
-  </div>
-  `,
+  template:`<product-list>`,
   //templateUrl: './app.component.html',
   //styleUrls: ['./app.component.css']
   providers : [ProductserviceService]
