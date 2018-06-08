@@ -17,7 +17,6 @@ export class ProductserviceService {
     console.log("service strat URL="+this._productUrl);
 
   }
-
   
   getProduct(): Observable<IProduct[]> {
     console.log('return data ='+this._httpclint.get<IProduct[]>(this._productUrl));
