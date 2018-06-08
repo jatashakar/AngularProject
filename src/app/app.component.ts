@@ -4,7 +4,7 @@ import { ProductserviceService } from './service/productservice.service';
 @Component({
   selector: 'app-root',
   template:`
-  <div>
+<div>
 <nav class ='navbar navbar-default'>
 <div class = 'conrainer-fluid'>
 <a class='navbar-brand'>{{pageTitle}}</a>
