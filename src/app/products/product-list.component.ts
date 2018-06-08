@@ -55,12 +55,12 @@ ngOnInit(): void {
     .subscribe(products => {
         this.products = this.products
         this.filterProducts = this.products
-        console.log('filter data='+this.filterProducts)
+       
     },
     error => this.errorMsg  = <any>error 
 );
-    
-    console.log('Hello OnInit Interface'+this.filterProducts);
+console.log('filter data='+this.filterProducts)
+console.log('Hello OnInit Interface'+this.filterProducts);
    // this._listFilterby='cart';
 }
 
