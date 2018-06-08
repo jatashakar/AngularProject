@@ -53,8 +53,9 @@ ngOnInit(): void {
     console.log("products ---- "+this.products);
     this._productService.getProduct()
     .subscribe(products => {
-        this.products = this.products;
-        this.filterProducts = this.products;     
+        this.products = this.products
+        this.filterProducts = this.products
+       
     },
     error => this.errorMsg  = <any>error 
 );
