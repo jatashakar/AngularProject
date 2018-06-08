@@ -9,7 +9,7 @@ import { tap, catchError } from 'rxjs/operators';
 @Injectable()
 export class ProductserviceService {
 
-  private _productUrl = './api/products/product.json';
+  private _productUrl = './api/products/products.json';
   handleError(error: any): any {
     throw new Error("Error throughn=" + error);
   }
