@@ -2,6 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { getQueryValue } from "@angular/core/src/view/query";
 import { IProduct } from "./product";
 import { ProductserviceService } from "../service/productservice.service";
+import { error } from "protractor";
 
 @Component({
 //    below are the meta data propery
@@ -14,6 +15,7 @@ import { ProductserviceService } from "../service/productservice.service";
 })
 export class ProductListComponent implements OnInit{
     
+    errorMsg: any;
 pageTitle : string = 'Product List'; //interpolation
 name: string = 'Jats'
 imgWidth : number = 100
@@ -49,8 +51,14 @@ constructor (private _productService : ProductserviceService){
 
 ngOnInit(): void {   
     console.log("products ---- "+this.products);
-    this._productService.getProduct(); 
-    this.filterProducts = this.products;
+    this._productService.getProduct()
+    .subscribe(this.products => {
+        this.products = this.products
+        this.filterProducts = this.products
+    },
+    error => this.errorMsg  = <any>error 
+);
+    
     console.log('Hello OnInit Interface'+this.products);
    // this._listFilterby='cart';
 }
