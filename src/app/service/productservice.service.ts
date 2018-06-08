@@ -14,7 +14,7 @@ export class ProductserviceService {
     throw new Error("Error throughn=" + error);
   }
   constructor(private _httpclint: HttpClient) {
-    console.log("service strat");
+    console.log("service strat URL="+this._productUrl);
 
   }
 
