@@ -25,7 +25,7 @@ export class ProductserviceService {
   getProduct(): Observable<IProduct[]> {
     console.log('return data ='+this._httpclint.get<IProduct[]>(this._productUrl));
     return this._httpclint.get<IProduct[]>(this._productUrl)
-    .do(data => console.log('All'+JSON.stringify(data)))
+    //.do(data => console.log('All'+JSON.stringify(data)))
     //.catch(console.log('Test'));
     
     // pipe(
