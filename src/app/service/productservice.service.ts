@@ -28,10 +28,10 @@ export class ProductserviceService {
     .do(data => console.log('All'+JSON.stringify(data)))
     .catch(console.log('Test'));
     
-    pipe(
-      tap(data => console.log('All Data:' + JSON.stringify(data))),
-      catchError(this.handleError)
-    )
+    // pipe(
+    //   tap(data => console.log('All Data:' + JSON.stringify(data))),
+    //   catchError(this.handleError)
+    // )
   }
 
   // getProduct():  IProduct[]{
