@@ -7,13 +7,14 @@ import { ProductListComponent } from './products/product-list.component';
 import { StartcomponentComponent } from './startcomponent/startcomponent.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductDetailsComponent } from './products/product-details.component';
+import { WelcomeComponent } from './products/welcome.component';
 
 
 
 
 @NgModule({
   declarations: [
-    AppComponent, ProductListComponent, StartcomponentComponent, ProductDetailsComponent
+    AppComponent, ProductListComponent, StartcomponentComponent, ProductDetailsComponent, WelcomeComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +23,7 @@ import { ProductDetailsComponent } from './products/product-details.component';
     RouterModule.forRoot([
       {path : 'products' , component: ProductListComponent},
       {path : 'products/:id' , component: ProductDetailsComponent},
-      {path : 'welcome' , component: Welcome},
+      {path : 'welcome' , component: WelcomeComponent},
       {path : '' ,redirectTo: 'welcome', pathMatch: 'full'},
       {path : '**' ,redirectTo: 'welcome', pathMatch: 'full'},
 
