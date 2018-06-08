@@ -12,7 +12,7 @@ import { ProductDetails } from './products/product-details.component.component';
 
 @NgModule({
   declarations: [
-    AppComponent, ProductListComponent, StartcomponentComponent, ProductDetails.ComponentComponent
+    AppComponent, ProductListComponent, StartcomponentComponent, ProductDetails
   ],
   imports: [
     BrowserModule,
