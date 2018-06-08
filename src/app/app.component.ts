@@ -14,6 +14,9 @@ import { ProductserviceService } from './service/productservice.service';
 </ul>
 </div>
 </nav>
+<div class= 'container'>
+<router-outlet></routrer-outlet>
+</div>
   </div>
   `,
   //templateUrl: './app.component.html',
