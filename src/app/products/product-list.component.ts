@@ -52,14 +52,14 @@ constructor (private _productService : ProductserviceService){
 ngOnInit(): void {   
     console.log("products ---- "+this.products);
     this._productService.getProduct()
-    .subscribe(this.products => {
+    .subscribe(products => {
         this.products = this.products
         this.filterProducts = this.products
     },
     error => this.errorMsg  = <any>error 
 );
     
-    console.log('Hello OnInit Interface'+this.products);
+    //console.log('Hello OnInit Interface'+this.products);
    // this._listFilterby='cart';
 }
 
