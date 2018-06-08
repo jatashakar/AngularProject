@@ -3,6 +3,7 @@ import { IProduct } from '../products/product';
 import { Observable, pipe} from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { tap, catchError } from 'rxjs/operators';
+import 'rxjs/add/operator/do';
 
 
 
@@ -21,7 +22,8 @@ export class ProductserviceService {
   
   getProduct(): Observable<IProduct[]> {
     console.log('return data ='+this._httpclint.get<IProduct[]>(this._productUrl));
-    return this._httpclint.get<IProduct[]>(this._productUrl);
+    return this._httpclint.get<IProduct[]>(this._productUrl)
+    .do
     
     pipe(
       tap(data => console.log('All Data:' + JSON.stringify(data))),
